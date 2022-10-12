@@ -1,8 +1,15 @@
-<div id="resumen">
-<h2>All beers!</h2>
-  <ul>
+<div id='beers-main'>
+  <h2>All beers!</h2>
+  <div id="beers">
     {{#each allBeers}}
-      {{> beerpartial}}
+      <div class="eachBeer">
+        <a href='/beer/{{this.id}}'>
+          <img src='{{this.image_url}}' alt='beer-image' height='200px' />
+          <h3>{{this.name}}</h3>
+          <p class ="tagline">{{this.tagline}}</p>
+          <p>{{this.description}}</p>
+        </a>
+      </div>
     {{/each}}
-  </ul>
+  </div>
 </div>
